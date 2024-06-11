@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu4You</title>
+    
+    <!--=====[ GOOGLE FONTS ]=====-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i,700,700i|Satisfy|Comic+Neue:300,300i,400,400i,700,700i" rel="stylesheet">
+    <!--=====[ CSS FILES ]=====-->
+    <link rel="stylesheet" href="asset/css/style.css">
+    <link rel="stylesheet" href="asset/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="asset/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="asset/animate.css/animate.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="asset\img\logo.ico" />
+</head>
+<body>
+    <!--=====[ HEADER ]=====-->
+    <header class="fixed-top p-0">
+        <!--=====[ OPENING & CLOSING SCHEDULE ]=====-->
+        <section id="sched" class="sched d-flex justify-content-center mt-2">
+            <div class="bi bi-clock mx-2" style="color: orange;"></div>
+            <p style="color: white;">Mon-Fri: 8:00am - 10:00pm</p>
+        </section>
+        <div id="nav-container" class="nav-container container-fluid d-flex align-items-center justify-content-center">
+            <!--=====[ LOGO ]=====-->
+            <a class="logo me-auto" href="#">
+                <img src="asset/img/Logo.png" alt="Menu4You">
+            </a>
+            <!--=====[ NAVIGATION LINKS/BUTTONS ]=====-->
+            <nav class="navbar navbar-expand-lg p-0">
+                <div class="container p-0">
+                    <div class="offcanvas offcanvas-center" tabindex="-1" id="offcanvas">
+                        <ul class="nav-links px-2 py-4">
+                            <li class="list-unstyled" data-bs-dismiss="offcanvas" aria-label="Close">
+                                <a id="_home" class="nav-link" href="#" onclick="linkActivate('_home')">Home</a>
+                            </li>
+                            <li class="list-unstyled" data-bs-dismiss="offcanvas" aria-label="Close">
+                                <a id="_about" class="nav-link" href="#about" onclick="linkActivate('_about')">About</a>
+                            </li>
+                            <li class="list-unstyled" data-bs-dismiss="offcanvas" aria-label="Close">
+                                <a id="_team" class="nav-link" href="#our-team" onclick="linkActivate('_team')">Team</a>
+                            </li>
+                            <li class="list-unstyled" data-bs-dismiss="offcanvas" aria-label="Close">
+                                <a id="_gallery" class="nav-link" href="#gallery" onclick="linkActivate('_gallery')">Gallery</a>
+                            </li>
+                            <li class="list-unstyled" data-bs-dismiss="offcanvas" aria-label="Close">
+                                <a id="_contact" class="nav-link" href="#contact" onclick="linkActivate('_contact')">Contacts</a>
+                            </li>
+                        </ul>
+                        <button class="btn btn-danger close-btn position-fixed top-0 end-0 m-3" data-bs-dismiss="offcanvas" aria-label="Close" id="externalCloseButton">×</button>
+                    </div>
+                    <button class="nav-link-btn order-last order-lg-0" data-bs-toggle="offcanvas" data-bs-target="#offcanvas">
+                        <span class="bar" id="bar1"></span>
+                        <span class="bar" id="bar2"></span>
+                        <span class="bar" id="bar3"></span>
+                    </button>
+                    <a href="#menu" class="menu-btn">Our Menu</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--=====[ LANDING PAGE ]=====-->
+    <section class="landing-page">
+        <div id="carouselExampleCaptions" class="carousel slide carousel-fade">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <!--=====[ SLIDE 1 ]=====-->
+                <div class="carousel-item active">
+                    <img src="asset/img/Coffee_bg.jpeg" alt="#">
+                    <div class="carousel-caption d-block">
+                        <h1 class="animate__animated animate__fadeInDown">
+                            <span>Purrfect</span>
+                            <span style="color: orange;">Brews</span>
+                        </h1>
+                        <p class="animate__animated animate__fadeInUp">
+                            <span style="color: cyan;">Expertly brewed</span> coffee creates an unparalleled sensory delight.
+                             Experience the <span style="color: cyan;">perfect blend</span> of premium beverages and a cozy ambiance that you won't find anywhere else.
+                        </p>
+                    </div>
+                </div>
+                <!--=====[ SLIDE 2 ]=====-->
+                <div class="carousel-item">
+                    <img src="asset/img/Cat_bg.jpg" alt="#">
+                    <div class="carousel-caption d-block">
+                        <h1 class="animate__animated animate__fadeInDown">
+                            <span>Purrfect</span>
+                            <span style="color: orange;">Companions</span>
+                        </h1>
+                        <p class="animate__animated animate__fadeInUp">
+                            A haven where the warmth and charm of our <span style="color: cyan;">elite cats</span> await.
+                             Enjoy a peaceful retreat with these <span style="color: cyan;">delightful companions</span>, surrounded by a welcoming and comforting atmosphere.
+                        </p>
+                    </div>
+                </div>
+                <!--=====[ SLIDE 3 ]=====-->
+                <div class="carousel-item">
+                    <img src="asset/img/Environment_bg.png" alt="#">
+                    <div class="carousel-caption d-block">
+                        <h1 class="animate__animated animate__fadeInDown">
+                            <span>Purrfect</span>
+                            <span style="color: orange;">Place</span>
+                        </h1>
+                        <p class="animate__animated animate__fadeInUp">
+                            Indulge in the best of both worlds at 
+                            <span style="color: orange;">Menu4You</span>.
+                             Savor high-quality coffee in an <span style="color: cyan;">unmatched atmosphere</span> of bliss and tranquility, designed for those who seek the ultimate relaxation and enjoyment.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <!--=====[ MAIN CONTENTS ]=====-->
+    <main>
+        <!--=====[ ABOUT ]=====-->
+        <section id="about" class="about py-4">
+            <h1 class="text-center my-4">
+                About
+                <span style="color: orange;">Us</span>
+            </h1>
+            <div class="container">
+                <div class="row gx-4">
+                    <div class="col-md-5 mb-4">
+                        <img class="rounded-2" src="asset/gallery/Shop1.png" alt="menu4you">
+                    </div>
+                    <div class="col-md-7 rounded">
+                        <div class="about-box rounded p-4 mb-4">
+                            <p>
+                                At menu4you, we strive to give each and every one of our clients an unforgettable and friendly experience.
+                                 Our café is meant to be your refuge, whether you come for a tasty pastry, a properly prepared cup of coffee, or to spend time with our adorable kitties.
+                                <br><br>
+                                 We warmly request you to come see us and take in the café's enchantment. 
+                                 You can find everything you need here, whether you're seeking for a peaceful place to work with our dependable and fast internet, a warm location to get together with friends, or just some quality time with our cute cats. 
+                                 Arrive for the coffee, remain for the companionship, and depart with a grin. 
+                                <br><br>
+                                 We are grateful that you have joined our community. At menu4you, where every visit feels like home, we look forward to having you.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--=====[ OFFER PAGE ]=====-->
+        <section class="offer py-4">
+            <div class="container my-4">
+                <div class="text-center mb-3">
+                    <h1 style="color: white;">
+                        What we offer on 
+                        <span style="color: orange;">Our Cafe</span>
+                    </h1>
+                </div>
+                <!--=====[ OFFERS ]=====-->
+                <div class="row d-flex justify-content-center">
+                    <!--=====[ OFFER 1 ]=====-->
+                    <div class="col-md-6 col-lg-4 mt-4 mt-lg-0">
+                        <div class="box">
+                            <span>01</span>
+                            <h4>Internet Access</h4>
+                            <p>Stay connected and caffeinated with our blazing fast free Wi-Fi!</p>
+                        </div>
+                    </div>
+                    <!--=====[ OFFER 2 ]=====-->
+                    <div class="col-md-6 col-lg-4 mt-4 mt-lg-0">
+                        <div class="box">
+                            <span>02</span>
+                            <h4>Cute Companions</h4>
+                            <p>Come for the coffee, stay for the cuddles with our adorable elite cats!</p>
+                        </div>
+                    </div>
+                    <!--=====[ OFFER 3 ]=====-->
+                    <div class="col-md-6 col-lg-4 mt-4 mt-lg-0">
+                        <div class="box">
+                        <span>03</span>
+                        <h4>Monthly Raffle</h4>
+                        <p>Join the fun and enter our raffle for a chance to win amazing weekly prizes!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--=====[ MENU ]=====-->
+        <section id="menu" class="menu py-4">
+            <div class="container mt-3">
+                <div class="text-center my-3">
+                    <h1>
+                        Our Purrfect
+                        <span style="color: orange;">Menu</span>
+                    </h1>
+                </div>
+                <!--=====[ CATEGORY BUTTON ]=====-->
+                <div class="d-flex justify-content-around">
+                    <ul id="menu-filters">
+                        <li id="hot-c" class="category-btn" onclick="showDetails('hot-coffee','hot-c')">Hot Coffee</li>
+                        <li id="ice-c" class="category-btn" onclick="showDetails('ice-coffee','ice-c')">Ice Coffee</li>
+                        <li id="non-c" class="category-btn" onclick="showDetails('non-coffee','non-c')">Non-Coffee</li>
+                        <li id="_frappe" class="category-btn" onclick="showDetails('frappe','_frappe')">Frappe</li>
+                        <li id="_croffle" class="category-btn" onclick="showDetails('croffle','_croffle')">Croffle</li>
+                        <li id="_ad-ons" class="category-btn" onclick="showDetails('add-ons','_ad-ons')">Add Ons</li>                        
+                    </ul>
+                </div>
+                <!--=====[ CATEGORY ITEMS & PRICES ]=====-->
+                <div class="menu-container">
+                    <!--=====[ HOT COFFEE ]=====-->
+                    <div id="hot-coffee" class="category">
+                        <div class="w-100 d-flex justify-content-end mt-4">
+                            <div class="w-50 d-flex justify-content-around animate__animated animate__fadeInDown">
+                                <span>S</span>
+                                <span>M</span>
+                                <span>L</span>
+                            </div>
+                        </div>
+                        <div class="menu-price animate__animated animate__fadeInUp">
+                            <a href="#">Hot Coffee</a>
+                            <div class="w-50 d-flex justify-content-around">
+                                <span>₱68</span>
+                                <span>₱78</span>
+                                <span>₱88</span>
+                            </div>
+                        </div>
+                        <!--=====[ PRODUCTS ]=====-->
+                        <div class="menu-product mt-4">
+                            <div class="row gx-4">
+                                <!--=====[ SPANISH LATTE ]=====-->
+                                <div class="col-6 col-lg-4 product mb-4">
+                                    <p class="mb-2">Spanish Latte</p>
+                                    <img class="rounded" src="asset/img/Spanish _latte.jpeg" alt="spanish-latte">
+                                </div>
+                                <!--=====[ MOCHA LATTE ]=====-->
+                                <div class="col-6 col-lg-4 product mb-4">
+                                    <p class="mb-2">Mocha Latte</p>
+                                    <img class="rounded" src="asset/img/Mocha_latte.jpeg" alt="mocha-latte">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--=====[ ICE COFFEE ]=====-->
+                    <div id="ice-coffee" class="menu-item category">
+                        <div class="w-100 d-flex justify-content-end mt-4">
+                            <div class="w-50 d-flex justify-content-around animate__animated animate__fadeInDown">
+                                <span>S</span>
+                                <span>M</span>
+                                <span>L</span>
+                            </div>
+                        </div>
+                        <div class="menu-price">
+                            <a href="#">Ice Coffee</a>
+                            <div class="w-50 d-flex justify-content-around animate__animated animate__fadeInUp"">
+                                <span>₱108</span>
+                                <span>₱118</span>
+                                <span>₱128</span>
+                            </div>
+                        </div>
+                        <!--=====[ PRODUCTS ]=====-->
+                        <div class="menu-product mt-4">
+                            <div class="row gx-4">
+                                <!--=====[ CARAMEL MACCHIATO ]=====-->
+                                <div class="col-6 col-lg-4 product mb-4">
+                                    <p class="mb-2">Caramel Macchiato</p>
+                                    <img class="rounded" src="asset/img/Caramel_macchiato.jpeg" alt="Caramel-macchiato">
+                                </div>
+                                <!--=====[ SPANISH LATTE ]=====-->
+                                <div class="col-6 col-lg-4 product mb-4">
+                                    <p class="mb-2">Spanish Latte</p>
+                                    <img class="rounded" src="asset/img/Spanish_latte(ice).jpeg" alt="spaning-latte">
+                                </div>
+                                <!--=====[ HAZELNUT LATTE ]=====-->
+                                <div class="col-6 col-lg-4 product mb-4">
+                                    <p class="mb-2">Hazelnut Latte</p>
+                                    <img class="rounded" src="asset/img/Hazelnut_latte.jpeg" alt="hazelnut-latte">
+                                </div>
+                                <!--=====[ SALTED CARAMEL]=====-->
+                                <div class="col-6 col-lg-4 product mb-4">
+                                    <p class="my-2">Salted Caramel</p>
+                                    <img class="rounded" src="asset/img/Salted_caramel.jpeg" alt="salted-caramel">
+                                </div>
+                                <!--=====[ STRAWBERRY LATTE ]=====-->
+                                <div class="col-6 col-lg-4 product mb-4">
+                                    <p class="my-2">Strawberry Latte</p>
+                                    <img class="rounded" src="asset/img/Strawberry_latte.jpeg" alt="strawberry-latte">
+                                </div>
+                                <!--=====[ WHITE MOCHA LATTE ]=====-->
+                                <div class="col-6 col-lg-4 product mb-4">
+                                    <p class="my-2">White Mocha Latte</p>
+                                    <img class="rounded" src="asset/img/White_mocha_latte.jpeg" alt="white-mocha-latte">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--=====[ NON COFFEE ]=====-->
+                    <div id="non-coffee" class="menu-item category">
+                        <div class="w-100 d-flex justify-content-end mt-4">
+                            <div class="w-50 d-flex justify-content-around animate__animated animate__fadeIDown">
+                                <span>S</span>
+                                <span>M</span>
+                                <span>L</span>
+                            </div>
+                        </div>
+                        <div class="menu-price animate__animated animate__fadeInUp"">
+                            <a href="#">Non-Coffee</a>
+                            <div class="w-50 d-flex justify-content-around">
+                                <span>₱98</span>
+                                <span>₱108</span>
+                                <span>₱118</span>
+                            </div>
+                        </div>
+                        <!--=====[ PRODUCTS ]=====-->
+                        <div class="menu-product mt-4">
+                            <div class="row gx-4">
+                                <!--=====[ MILKY STRAWBERRY ]=====-->
+                                <div class="col-6 col-lg-4 product mb-4">
+                                    <p class="my-2">Milky Strawberry</p>
+                                    <img class="rounded" src="asset/img/milkstrawberry.jpg" alt="milky strawberry">
+                                </div>
+                                <!--=====[ STRAWBERRY MATCHA]=====-->
+                                <div class="col-6 col-lg-4 product mb-4">
+                                    <p class="my-2">Milky Strawberry</p>
+                                    <img class="rounded" src="asset/img/Strawberry-Matcha-Latte-.jpg" alt="strawberry-matcha">
+                                </div>
+                                <!--=====[ CHOCOLATE FLOAT]=====-->
+                                <div class="col-6 col-lg-4 product mb-4">
+                                    <p class="my-2">Chocolate Float</p>
+                                    <img class="rounded" src="asset/img/chocofloat.jpg" alt="choco-float">
+                                </div>
+                                <!--=====[ MILKY MATCHA ]=====-->
+                                <div class="col-6 col-lg-4 product mb-4">
+                                    <p class="my-2">Milky Matcha</p>
+                                    <img class="rounded" src="asset/img/milkymatcha.jpg" alt="milky-matcha">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--=====[ FRAPPE ]=====-->
+                    <div id="frappe" class="menu-item category">
+                        <div class="w-100 d-flex justify-content-end mt-4" >
+                            <div class="w-50 d-flex justify-content-around animate__animated animate__fadeInDown">
+                                <span>S</span>
+                                <span>M</span>
+                                <span>L</span>
+                            </div>
+                        </div>
+                        <div class="menu-price animate__animated animate__fadeInUp">
+                            <a href="#">Frappe</a>
+                            <div class="w-50 d-flex justify-content-around">
+                                <span>₱108</span>
+                                <span>₱118</span>
+                                <span>₱128</span>
+                            </div>
+                        </div>
+                        <!--=====[ PRODUCTS ]=====-->
+                        <div class="menu-product mt-4">
+                            <div class="row gx-4">
+                                <!--=====[ MANGO GRAHAM ]=====-->
+                                <div class="col-6 col-lg-4 product mb-4">
+                                    <p class="my-2">Mango Graham</p>
+                                    <img class="rounded" src="asset/img/mangograham.jpg" alt="mango-graham">
+                                </div>
+                                <!--=====[ JAVA CHIP ]=====-->
+                                <div class="col-6 col-lg-4 product mb-4">
+                                    <p class="my-2">Java Chip</p>
+                                    <img class="rounded" src="asset/img/javachip.jpg" alt="java-chip">
+                                </div>
+                                <!--=====[ VANILLA MATCHA ]=====-->
+                                <div class="col-6 col-lg-4 product mb-4">
+                                    <p class="my-2">Vanilla Matcha</p>
+                                    <img class="rounded" src="asset/img/vanillamatcha.jpg" alt="vanilla-matcha">
+                                </div>
+                                <!--=====[ STRAWBERRY ]=====-->
+                                <div class="col-6 col-lg-4 product mb-4">
+                                    <p class="my-2">Strawberry</p>
+                                    <img class="rounded" src="asset/img/strawberry-latte.jpg" alt="strawberry">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--=====[ CROFFLE ]=====-->
+                    <div id="croffle" class="menu-item category mt-4">
+                        <div class="menu-price animate__animated animate__fadeInUp">
+                            <a href="#">Croffle</a>
+                            <div>
+                                <span>₱98</span>
+                            </div>
+                        </div>
+                        <!--=====[ PRODUCTS ]=====-->
+                        <div class="menu-product mt-4">
+                            <div class="row gx-4">
+                                <!--=====[ PLAIN ]=====-->
+                                <div class="col-6 col-lg-4 product mb-4">
+                                    <p class="my-2">Croffle</p>
+                                    <img class="rounded" src="asset/img/croffle.jpg" alt="croffle">
+                                </div>
+                                <!--=====[ NUTELLA ]=====-->
+                                <div class="col-6 col-lg-4 product mb-4">
+                                    <p class="my-2">Nutella</p>
+                                    <img class="rounded" src="asset/img/nutellafrappe.jpg" alt="nutella">
+                                </div>
+                                <!--=====[ COOKIES AND CREAM ]=====-->
+                                <div class="col-6 col-lg-4 product mb-4">
+                                    <p class="my-2">Cookies & Cream</p>
+                                    <img class="rounded" src="asset/img/cookiesfrappe.jpg" alt="cookies-&-cream">
+                                </div>
+                                <!--=====[ CREAMY STRAWBERRY ]=====-->
+                                <div class="col-6 col-lg-4 product mb-4">
+                                    <p class="my-2">Creamy Strawberry</p>
+                                    <img class="rounded" src="asset/img/creamystrawberry.jpg" alt="mcreamy-strawberry">
+                                </div>
+                                <!--=====[ CREAMY MATCHA ]=====-->
+                                <div class="col-6 col-lg-4 product mb-4">
+                                    <p class="my-2">Creamy Matcha</p>
+                                    <img class="rounded" src="asset/img/matchacroffle.jpg" alt="creamy-matcha">
+                                </div>
+                                <!--=====[ NUTELLA ALMOND ]=====-->
+                                <div class="col-6 col-lg-4 product mb-4">
+                                    <p class="my-2">Nutella Almond</p>
+                                    <img class="rounded" src="asset/img/nutellaalmond.jpg" alt="nutella-almond">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--=====[ ADD ONS ]=====-->
+                    <div id="add-ons" class="menu-item category mt-4">
+                        <div class="menu-price animate__animated animate__fadeInUp">
+                            <a href="#">Add Ons</a>
+                            <div>
+                                <span>₱28</span>
+                            </div>
+                        </div>
+                        <!--=====[ PRODUCTS ]=====-->
+                        <div class="menu-product mt-4">
+                            <div class="row gx-4">
+                                <!--=====[ SAUCE ]=====-->
+                                <div class="col-6 col-lg-4 product mb-4">
+                                    <p class="my-2">Sauce</p>
+                                    <img class="rounded" src="asset/img/sauce.jpg" alt="sauce">
+                                </div>
+                                <!--=====[ SUGAR ]=====-->
+                                <div class="col-6 col-lg-4 product mb-4">
+                                    <p class="my-2">Sugar</p>
+                                    <img class="rounded" src="asset/img/sugar.jpg" alt="sugar">
+                                </div>
+                                <!--=====[ EXPRESSO SHOT ]=====-->
+                                <div class="col-6 col-lg-4 product mb-4">
+                                    <p class="my-2">Expresso Shot</p>
+                                    <img class="rounded" src="asset/img/expresso shot.jpg" alt="expresso-shot">
+                                </div>
+                                <!--=====[ MILK ]=====-->
+                                <div class="col-6 col-lg-4 product mb-4">
+                                    <p class="my-2">Milk</p>
+                                    <img class="rounded" src="asset/img/milk.jpg" alt="milk">
+                                </div>
+                                <!--=====[ ALMOND MILK ]=====-->
+                                <div class="col-6 col-lg-4 product mb-4">
+                                    <p class="my-2">Almond Milk</p>
+                                    <img class="rounded" src="asset/img/almondmilk.jpg" alt="almond-milk">
+                                </div>
+                                <!--=====[ ICE CREAM ]=====-->
+                                <div class="col-6 col-lg-4 product mb-4">
+                                    <p class="my-2">Ice Cream</p>
+                                    <img class="rounded" src="asset/img/icecream.jpg" alt="ice-cream">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--=====[ GALLERY ]=====-->
+        <section id="gallery" class="gallery">
+            <div class="container py-4">
+                <div class="text-center my-4">
+                    <h1 style="color: orangered;">Gallery</h1>
+                </div>
+                <div class="row gx-4">
+                    <div class="col-6 col-md-4 mb-4">
+                        <img class="rounded-2" src="asset/gallery/Shop2.png" alt="">
+                    </div>
+                    <div class="col-6 col-md-4 mb-4">
+                        <img class="rounded-2" src="asset/gallery/Shop3.png" alt="">
+                    </div>
+                    <div class="col-6 col-md-4 mb-4">
+                        <img class="rounded-2" src="asset/gallery/coffee-shop1.jpg" alt="">
+                    </div>
+                    <div class="col-6 col-md-4 mb-4">
+                        <img class="rounded-2" src="asset/gallery/coffee-shop2.jpg" alt="">
+                    </div>
+                    <div class="col-6 col-md-4 mb-4">
+                        <img class="rounded-2" src="asset/gallery/coffee-shop3.jpeg" alt="">
+                    </div>
+                    <div class="col-6 col-md-4 mb-4">
+                        <img class="rounded-2" src="asset/gallery/coffee-shop4.jpg" alt="">
+                    </div>
+                    <div class="col-6 col-md-4 mb-4">
+                        <img class="rounded-2" src="asset/gallery/coffee-shop5.jpg" alt="">
+                    </div>
+                    <div class="col-6 col-md-4 mb-4">
+                        <img class="rounded-2" src="asset/gallery/coffee-shop6.jpg" alt="">
+                    </div>
+                    <div class="col-6 col-md-4 mb-4">
+                        <img class="rounded-2" src="asset/gallery/coffee-shop7.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--=====[ TEAM ]=====-->
+        <section id="our-team" class="our-team container-fluid py-4">
+            <div class="container d-flex flex-column align-items-center">
+                <h1 class="text-center my-4">
+                    Our
+                    <span style="color: cyan;">Purrfect</span>
+                    <span style="color: orangered;">Team</span>
+                </h1>
+                <!--=====[ MAIN TEAM ]=====-->
+                <div class="row gx-4">
+                    <!--=====[ CEO ]=====-->
+                    <div class="col-md-6 mb-4">
+                        <div class="team py-4">
+                            <div class="picture">
+                                <img src="asset/team/Carl.jpg" alt="ceo">
+                            </div>
+                            <div class="text-center">
+                                <p class="my-0" style="font-weight: bold;">Carl Joshua Cadungog</p>
+                                <p class="my-0">CEO</p>
+                                <div class="d-flex flex-column align-items-center">
+                                    <div class="responsibility my-3 p-3">
+                                        Oversees the overall strategic direction, drives business growth, and ensures efficient operations.
+                                    </div>
+                                    <div class="social w-50 d-flex justify-content-around">
+                                        <a href=""><i class="bi bi-twitter"></i></a>
+                                        <a href=""><i class="bi bi-facebook"></i></a>
+                                        <a href=""><i class="bi bi-instagram"></i></a>
+                                        <a href=""><i class="bi bi-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--=====[ BARISTA ]=====-->
+                    <div class="col-md-6 mb-4">
+                        <div class="team py-4">
+                            <div class="picture">
+                                <img src="asset/team/Kevin.jpg" alt="barista">
+                            </div>
+                            <div class="text-center">
+                                <p class="my-0" style="font-weight: bold;">Kurt Kevin Mallari</p>
+                                <p class="my-0">Barista</p>
+                                <div class="d-flex flex-column align-items-center">
+                                    <div class="responsibility my-3 p-3">
+                                        Prepares and serves coffee and other beverages, maintains a clean work area, and provides excellent customer service.
+                                    </div>
+                                    <div class="social w-50 d-flex justify-content-around">
+                                        <a href=""><i class="bi bi-twitter"></i></a>
+                                        <a href=""><i class="bi bi-facebook"></i></a>
+                                        <a href=""><i class="bi bi-instagram"></i></a>
+                                        <a href=""><i class="bi bi-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--=====[ SERVER ]=====-->
+                    <div class="col-md-6 mb-4">
+                        <div class="team py-4">
+                            <div class="picture">
+                                <img src="asset/team/Kent.jpg" alt="server">
+                            </div>
+                            <div class="text-center">
+                                <p class="my-0" style="font-weight: bold;">Kent Raven De Leon</p>
+                                <p class="my-0">Waiter</p>
+                                <div class="d-flex flex-column align-items-center">
+                                    <div class="responsibility my-3 p-3">
+                                        Takes orders, serves food and beverages, and ensures customer satisfaction.
+                                    </div>
+                                    <div class="social w-50 d-flex justify-content-around">
+                                        <a href=""><i class="bi bi-twitter"></i></a>
+                                        <a href=""><i class="bi bi-facebook"></i></a>
+                                        <a href=""><i class="bi bi-instagram"></i></a>
+                                        <a href=""><i class="bi bi-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--=====[ COSTUMER SERVICE REPRESENTATIVE]=====-->
+                    <div class="col-md-6 mb-4">
+                        <div class="team py-4">
+                            <div id="hover-image" class="picture mark-js">
+                                <img src="asset/team/Mark.png" alt="cs-rep">
+                            </div>
+                            <div class="text-center">
+                                <p class="my-0" style="font-weight: bold;">Mark Jason Mendoza</p>
+                                <p class="my-0">Costumer Service Representative</p>
+                                <div class="d-flex flex-column align-items-center">
+                                    <div class="responsibility my-3 p-3">
+                                        Handles customer inquiries, resolves complaints, and provides information about products and services.
+                                    </div>
+                                    <div class="social w-50 d-flex justify-content-around">
+                                        <a href=""><i class="bi bi-twitter"></i></a>
+                                        <a href=""><i class="bi bi-facebook"></i></a>
+                                        <a href=""><i class="bi bi-instagram"></i></a>
+                                        <a href=""><i class="bi bi-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--=====[ CAT TEAM ]=====-->
+                <h1 class="text-center my-4">
+                    Our Purrfect
+                    <span style="color: cyan;">Elite Cat</span>
+                    <span style="color: orangered;">Team</span>
+                </h1>
+                <div id="carouselExample" class="carousel slide carousel-fade">
+                    <div class="carousel-inner vh-3">
+                        <!--=====[ CAT 1 ]=====-->
+                        <div class="carousel-item active">
+                            <div class="pic">
+                                <img src="asset/team/Cat1.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="member-info">
+                                <h4>Alpha</h4>
+                                <span>Leader of the pack</span>
+                            </div>
+                        </div>
+                        <!--=====[ CAT 2 ]=====-->
+                        <div class="carousel-item">
+                            <div class="pic">
+                                <img src="asset/team/Cat2.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="member-info">
+                                <h4>Claire</h4>
+                                <span>Muse</span>
+                            </div>
+                        </div>
+                        <!--=====[ CAT 3 ]=====-->
+                        <div class="carousel-item">
+                            <div class="pic">
+                                <img src="asset/team/Cat3.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="member-info">
+                                <h4>Snorlax</h4>
+                                <span>Security Cat</span>
+                            </div>
+                        </div>
+                        <!--=====[ CAT 4 ]=====-->
+                        <div class="carousel-item">
+                            <div class="pic">
+                                <img src="asset/team/Cat4.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="member-info">
+                                <h4>Hobo</h4>
+                                <span>Food Stealer</span>
+                            </div>
+                        </div>
+                        <!--=====[ CAT 5 ]=====-->
+                        <div class="carousel-item">
+                            <div class="pic">
+                                <img src="asset/team/Cat5.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="member-info">
+                                <h4>Alden</h4>
+                                <span>Cuddler</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!--=====[ CONTACTS ]=====-->
+        <section id="contact" class="contact py-4">
+            <div class="container-fluid d-flex flex-column align-items-center">
+                <h1 class="text-center my-4">
+                    Contact
+                    <span style="color: orange;">Us</span>
+                </h1>
+                <div class="contact-box rounded p-4">
+                    <div class="row gx-4">
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="bi bi-geo-alt"></div>
+                            <h4>Location: </h4>
+                            <a href="">Earth</a>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="bi bi-clock"></div>
+                            <h4>Schedule: </h4>
+                            <a href="">Mon-Fri: 8:00a.m - 10:00p.m</a>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="bi bi-phone"></div>
+                            <h4>Contact Number: </h4>
+                            <a href="">+123456789</a>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="bi bi-envelope"></div>
+                            <h4>Email: </h4>                            
+                            <a href="">menu4you@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--=====[ ADS ]=====-->
+    <section>
+        <div id="overlay" class="overlay">
+            <div id="popup" class="popup">
+                <div class="popup-content">
+                    <span class="close-btn" id="close-btn">&times;</span>
+                    <img id="popup-image" src="" alt="Ad Image">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--=====[ FOOTER ]=====-->
+    <footer id="footer">
+        <div class="container">
+            <img src="asset\img\Logo_Letter.png" alt="Letter">
+            <div class="social-links">
+                <a href="https://twitter.com" class="twitter"><i class="bi bi-twitter"></i></a>
+                <a href="https://facebook.com" class="facebook"><i class="bi bi-facebook"></i></a>
+                <a href="https://instagram.com" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="https://skype.com" class="skype"><i class="bi bi-skype"></i></a>
+                <a href="https://linkedin.com" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            </div>
+            <div class="copyright">
+                &copy; Copyright <strong><span>Purrfect Brews</span></strong>. All Rights Reserved
+            </div>
+        </div>
+    </footer>
+    <!--=====[ JAVASCRIPT FILES ]=====-->
+    <script src="asset/js/script.js"></script>
+    <script src="asset/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
