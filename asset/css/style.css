@@ -362,7 +362,11 @@ MENU STYLES
     border-top-right-radius: 15px;
     border-bottom-left-radius: 15px;
 }
-
+.menu #menu-filters li:hover{
+    color: white;
+    background-color: orange;
+    transition:color 1s ease-in; 
+}
 .menu #menu-filters li:last-child {
     margin-right: 0;
 }
