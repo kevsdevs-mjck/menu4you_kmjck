@@ -365,7 +365,7 @@ MENU STYLES
 .menu #menu-filters li:hover{
     color: white;
     background-color: orange;
-    transition:color 1s ease-in; 
+    transition:color 0.5s ease-in, background-color 0.5s ease-out;  
 }
 .menu #menu-filters li:last-child {
     margin-right: 0;
