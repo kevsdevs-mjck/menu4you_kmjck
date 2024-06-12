@@ -114,11 +114,3 @@ const Mark = [
 const randomImg = Math.floor(Math.random() * Mark.length);
 let markImg = document.getElementById('mark-js');
 markImg.src = Mark[randomImg];
-
-const Kevin = [
-    'asset/team/Kevin.jpg',
-    'asset/team/Kevin2.jpg'
-];
-const randomImg = Math.floor(Math.random() * Kevin.length);
-let kevImg = document.getElementById('kevs-js');
-kevImg.src = Kevin[randomImg];
