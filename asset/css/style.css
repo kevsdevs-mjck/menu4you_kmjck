@@ -121,11 +121,12 @@ HEADER STYLES
     height: 85vh;
     background-color: #f8f9fa;
     border-radius: 10px;
+}
+.offcanvas-center ul {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
-
 .nav-links {
     width: 100%;
     height: 100%;
