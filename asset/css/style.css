@@ -151,7 +151,11 @@ HEADER STYLES
     margin-bottom: 20px;
     font-size: 25px;
 }
-
+.nav-links li:hover{
+    color: white;
+    background-color: orange;
+    padding: 1vw 2vw;
+}
 @media(min-width: 1024px) {
     .nav-links {
         width: 60vw;
