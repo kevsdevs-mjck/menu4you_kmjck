@@ -117,8 +117,8 @@ HEADER STYLES
     top: 55%;
     left: 50%;
     transform: translate(-50%, -50%) !important;
-    width: 90vw;
-    height: 85vh;
+    width: 50vw;
+    height: 60vh;
     background-color: #f8f9fa;
     border-radius: 10px;
     display: flex;
