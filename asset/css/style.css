@@ -155,6 +155,7 @@ HEADER STYLES
     color: white;
     background-color: orange;
     padding: 1vw 2vw;
+    border-radius: 5px;
 }
 @media(min-width: 1024px) {
     .nav-links {
