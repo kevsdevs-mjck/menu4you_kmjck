@@ -121,6 +121,8 @@ HEADER STYLES
     height: 85vh;
     background-color: #f8f9fa;
     border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
 }
 .offcanvas-center ul {
     display: flex;
