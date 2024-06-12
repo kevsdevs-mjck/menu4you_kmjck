@@ -104,3 +104,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     setInterval(togglePopup, 15000);
 });
+/*====================
+SECRET EGG
+====================*/
+const Mark = [
+    'asset/team/Mark.png',
+    'asset/team/Mark2.jpg'
+];
+const randomImg = Math.floor(Math.random() * Mark.length);
+let markImg = document.getElementById('mark-js');
+markImg.src = Mark[randomImg];
